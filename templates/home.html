@@ -5,21 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/style.css">
     <title>Jovian Careers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 </head>
 <body>
-    <div id="container">
-        <h1>Jovian Careers</h1>
-        <img id = "banner" src="static/banner.jpeg" alt="" width="100%" height = "320px">
-        <h2>About Jovian</h2>
+    <div class = "container">
+        <h1 class = "text-center mt-2 mb-4">{{company_name}} Careers</h1>
+        <img id = "banner" class = "img-fluid" src="static/banner.jpeg" alt="">
+        <h2 class = "text-center mt-2 mb-4">About Jovian</h2>
         
-            <p class = "bodytext">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        </div>
-        <h2>Open Positions</h2>
-        <p>TODO - Show the Jobs Here</p>
-        <div style = "text-align: center;">
-            <button>Contact Us</button>
-            <p>Copyright 2022, Jovian</p>
-        </div>
+            <p class = "lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <h2 class = "text-center mt-2 mb-4">Open Positions</h2>
+        <!-- <p>TODO - Show the Jobs Here</p> -->
+         {% include 'jobitem.html' %}
+
+            <div class="text-center">
+                <button class = "btn btn-primary btn-lg">Contact Us</button>
+                <p class = "mt-4">Copyright 2022, Jovian</p>
+            </div>
     </div>
 </body>
 </html>
