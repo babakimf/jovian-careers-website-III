@@ -8,20 +8,30 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 </head>
 <body>
+    {% include 'nav.html' %}
+    <img id = "banner" class = "img-fluid" src="static/banner.jpeg" alt="">
     <div class = "container">
         <h1 class = "text-center mt-2 mb-4">{{company_name}} Careers</h1>
-        <img id = "banner" class = "img-fluid" src="static/banner.jpeg" alt="">
         <h2 class = "text-center mt-2 mb-4">About Jovian</h2>
-        
-            <p class = "lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+        <div class = "row" style="margin-bottom: 16px;">
+            <div class="col-md-6">
+                <p class = "lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+            <div class="d-none d-md-block col-md-6">
+                <img src="static/people.jpg" alt="" style = "height: 320px; border-radius: 4px" >
+            </div>
+        </div>
         <h2 class = "text-center mt-2 mb-4">Job Opennings</h2>
         <!-- <p>TODO - Show the Jobs Here</p> -->
          {% include 'jobitem.html' %}
 
             <div class="text-center">
-                <button class = "btn btn-primary btn-lg">Contact Us</button>
+                <!-- <button class = "btn btn-primary btn-lg">Contact Us</button> -->
+                <a href="mailto:bkmhmd@yahoo.com?subject=My%20Question&body=%3CYour%20Name%3E%0D%0AThis%20is%20my%20question%3A%20%3CYour%20question%3E%0D%0A%0D%0AThank%20you%20very%20much%0D%0A" class = "btn btn-primary btn-lg">Contact Us</a>
                 <p class = "mt-4">Copyright 2022, Jovian</p>
             </div>
     </div>
+    {% include 'footer.html' %}
 </body>
 </html>
