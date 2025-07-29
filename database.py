@@ -1,9 +1,15 @@
 import sqlalchemy 
 from sqlalchemy import create_engine, text
 import os
+from dotenv import load_dotenv
+
+load_dotenv()  # Load environment variables from .env file
+
 
 # Replace with your actual MySQL username, password, host, port, and database name
 db_connection_string = os.getenv("DB_CONNECTION_STRING")
+if not db_connection_string:
+    raise ValueError("DB_CONNECTION_STRING environment variable is not set")
 engine = create_engine(db_connection_string)
 
 
